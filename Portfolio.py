@@ -1,4 +1,5 @@
 import streamlit as st
+import streamlit.components.v1 as components
 import pandas as pd
 import numpy as np
 import matplotlib.pyplot as plt
@@ -19,8 +20,44 @@ page = st.sidebar.radio("Aller à", ["Accueil", "À propos", "Projets", "Contact
 
 # Page d'accueil
 if page == "Accueil":
-    st.header("Accueil")
+    st.markdown("""<h2>Accueil</h2>""", unsafe_allow_html=True)
     st.write("Bienvenue sur mon portfolio. Explorez mes projets, apprenez-en plus sur moi et contactez-moi !")
+    st.markdown("""<h2>Mes compétences</h2>""", unsafe_allow_html=True)
+    st.markdown("""<h2>Mon parcours</h2>""", unsafe_allow_html=True)
+    components.html("""
+    <section style="display: flex; flex-direction: column; align-items: center; justify-content: center; min-height: 100vh; padding: 50px 0; font-family: 'Jost', sans-serif;">
+        <div style="width: 80%; max-width: 800px; margin: 0 auto; display: grid; grid-template-columns: 1fr 3px 1fr; align-items: center;">
+
+            <!-- Événement 1 -->
+            <div style="text-align: right; padding: 10px; background-color: #f0f0f0; border-radius: 10px;">
+                <h3 style="margin: 0; font-size: 1.2rem;">2025</h3>
+                <p style="margin: 5px 0;">Développeur Full Stack</p>
+                <p style="margin: 0;">Travail sur des projets innovants en utilisant Python, React et Node.js.</p>
+            </div>
+            <div style="position: relative; background: #E94057; width: 3px; height: 100%;"></div>
+            <div></div>
+
+            <!-- Événement 2 -->
+            <div></div>
+            <div style="position: relative; background: #E94057; width: 3px; height: 100%; "></div>
+            <div style="text-align: left; padding: 10px; background-color: #f0f0f0; border-radius: 10px;">
+                <h3 style="margin: 0; font-size: 1.2rem;">2023</h3>
+                <p style="margin: 5px 0;">Stage en Data Science</p>
+                <p style="margin: 0;">Analyse de données et création de modèles prédictifs avec Python et Scikit-learn.</p>
+            </div>
+
+            <!-- Événement 3 -->
+            <div style="text-align: right; padding: 10px; background-color: #f0f0f0; border-radius: 10px;">
+                <h3 style="margin: 0; font-size: 1.2rem;">2020</h3>
+                <p style="margin: 5px 0;">Diplôme en Informatique</p>
+                <p style="margin: 0;">Obtention d'un diplôme en informatique avec spécialisation en développement logiciel.</p>
+            </div>
+            <div style="position: relative; background: #E94057; width: 3px; height: 100%;"></div>
+            <div></div>
+
+        </div>
+    </section>
+    """, height=600)
 
 # Page À propos
 elif page == "À propos":
