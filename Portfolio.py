@@ -8,6 +8,7 @@ from sklearn.model_selection import train_test_split
 from sklearn.linear_model import LinearRegression
 from sklearn.metrics import mean_squared_error, r2_score
 
+
 # Configuration de la page
 st.set_page_config(page_title="Portfolio", page_icon=":briefcase:", layout="wide")
 
@@ -23,6 +24,34 @@ if page == "Accueil":
     st.markdown("""<h2>Accueil</h2>""", unsafe_allow_html=True)
     st.write("Bienvenue sur mon portfolio. Explorez mes projets, apprenez-en plus sur moi et contactez-moi !")
     st.markdown("""<h2>Mes compétences</h2>""", unsafe_allow_html=True)
+    st.markdown("""
+    <div style="display: flex; flex-wrap: wrap; gap: 20px; justify-content: center; align-items: center; margin-top: 20px;">
+        <div style="text-align: center;">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/3/38/Jupyter_logo.svg" alt="Jupyter" style="width: 120px; height: auto;">
+            <p>Jupyter</p>
+        </div>
+        <div style="text-align: center;">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/0/05/Scikit_learn_logo_small.svg" alt="Scikit-learn" style="width: 120px; height: auto;">
+            <p>Scikit-learn</p>
+        </div>
+        <div style="text-align: center;">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/2/22/Pandas_mark.svg" alt="Pandas" style="width: 120px; height: auto;">
+            <p>Pandas</p>
+        </div>
+        <div style="text-align: center;">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/3/31/NumPy_logo_2020.svg" alt="NumPy" style="width: 120px; height: auto;">
+            <p>NumPy</p>
+        </div>
+        <div style="text-align: center;">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/8/84/Matplotlib_icon.svg" alt="Matplotlib" style="width: 120px; height: auto;">
+            <p>Matplotlib</p>
+        </div>
+        <div style="text-align: center;">
+            <img src="https://seaborn.pydata.org/_images/logo-mark-lightbg.svg" alt="Seaborn" style="width: 120px; height: auto;">
+            <p>Seaborn</p>
+        </div>
+    </div>
+    """, unsafe_allow_html=True)
     st.markdown("""<h2>Mon parcours</h2>""", unsafe_allow_html=True)
     components.html("""
     <section style="display: flex; flex-direction: column; align-items: center; justify-content: center; min-height: 100vh; padding: 50px 0; font-family: 'Jost', sans-serif;">

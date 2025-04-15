@@ -1,0 +1,16 @@
+# Fichier .streamlit/config.toml
+
+[theme]
+primaryColor = "#4CAF50"
+backgroundColor = "#1E1E1E"
+secondaryBackgroundColor = "#333333"
+textColor = "#FFFFFF"
+font = "monospace"
+
+[server]
+headless = true
+port = 8501
+enableCORS = false
+
+[client]
+toolbarMode = "minimal"  # "minimal" ou "fullScreen"
